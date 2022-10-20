@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block title %} Категории {% endblock %}
+{% block header %}{% endblock %}
+{% load static %}
+
+{% block content %}
+
+    {% include "widgets/menu.html" with index=True %}
+    <div class="row">
+    {% for category in categories %}
+        <div class="col-md-4">
+            <div class="category-content">
+
+                <h4><a href="{% url 'shop' %}" class="categoryUrl">{{ category.name }}</a></h4>
+                {% if category.category_image %}
+                    <img class="img-responsive" src="{{ category.category_image.url }}" alt="product-img">
+                {% else %}
+                    <img class="img-responsive" src="{% static 'base_images/empty_img_1500.png' %}" alt="product-img">
+                {% endif %}
+            </div>
+        </div>
+    {% endfor %}
+    </div>
+
+    {% if categories.has_other_pages %}
+        {% include "paginator.html" with items=categories paginator=paginator %}
+    {% endif %}
+<script src="{% static 'script.js' %}"></script>
+{% endblock %}

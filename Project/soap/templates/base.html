@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>{% block title %}{% endblock %} | Soap Master</title>
+    <!-- Загрузка статики -->
+    {% load static %}
+    <link rel="stylesheet" href="{%  static 'Aviato_design/plugins/themefisher-font/style.css' %}">
+    <!-- Загрузка статики родные стили -->
+    <link rel="stylesheet" href="{% static 'bootstrap/dist/css/bootstrap.css' %}">
+    <!-- -->
+    <link rel="stylesheet" href="{% static 'Aviato_design/css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'Aviato_design/plugins/bootstrap/css/bootstrap.min.css' %}">
+    <script src="{% static 'Aviato_design/plugins/jquery/dist/jquery.min.js' %}"></script>
+    <script src="{% static 'Aviato_design/plugins/bootstrap/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'Aviato_design/js/script.js' %}"></script>
+</head>
+
+<body>
+    {% include 'nav.html' %}
+    <main>
+        <div class="container">
+            <h1>{% block header %}{% endblock %}</h1>
+            {% block content %}
+            <!-- Содержимое страницы -->
+            {% endblock %}
+        </div>
+    </main>
+    {% include 'footer.html' %}
+</body>
+</html>

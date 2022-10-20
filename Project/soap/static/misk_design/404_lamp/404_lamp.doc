@@ -1,0 +1,1367 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style>
+/*
+Copyright (c) 2003-2017, CKSource - Frederico Knabben. All rights reserved.
+For licensing, see LICENSE.md or http://ckeditor.com/license
+*/
+
+body
+{
+	/* Font */
+	font-family: sans-serif, Arial, Verdana, "Trebuchet MS";
+	font-size: 12px;
+
+	/* Text color */
+	color: #333;
+
+	/* Remove the background color to make it transparent */
+	background-color: #fff;
+
+	margin: 20px;
+}
+
+.cke_editable
+{
+	font-size: 13px;
+	line-height: 1.6;
+
+	/* Fix for missing scrollbars with RTL texts. (#10488) */
+	word-wrap: break-word;
+}
+
+blockquote
+{
+	font-style: italic;
+	font-family: Georgia, Times, "Times New Roman", serif;
+	padding: 2px 0;
+	border-style: solid;
+	border-color: #ccc;
+	border-width: 0;
+}
+
+.cke_contents_ltr blockquote
+{
+	padding-left: 20px;
+	padding-right: 8px;
+	border-left-width: 5px;
+}
+
+.cke_contents_rtl blockquote
+{
+	padding-left: 8px;
+	padding-right: 20px;
+	border-right-width: 5px;
+}
+
+a
+{
+	color: #0782C1;
+}
+
+ol,ul,dl
+{
+	/* IE7: reset rtl list margin. (#7334) */
+	*margin-right: 0px;
+	/* preserved spaces for list items with text direction other than the list. (#6249,#8049)*/
+	padding: 0 40px;
+}
+
+h1,h2,h3,h4,h5,h6
+{
+	font-weight: normal;
+	line-height: 1.2;
+}
+
+hr
+{
+	border: 0px;
+	border-top: 1px solid #ccc;
+}
+
+img.right
+{
+	border: 1px solid #ccc;
+	float: right;
+	margin-left: 15px;
+	padding: 5px;
+}
+
+img.left
+{
+	border: 1px solid #ccc;
+	float: left;
+	margin-right: 15px;
+	padding: 5px;
+}
+
+pre
+{
+	white-space: pre-wrap; /* CSS 2.1 */
+	word-wrap: break-word; /* IE7 */
+	-moz-tab-size: 4;
+	tab-size: 4;
+}
+
+.marker
+{
+	background-color: Yellow;
+}
+
+span[lang]
+{
+	font-style: italic;
+}
+
+figure
+{
+	text-align: center;
+	border: solid 1px #ccc;
+	border-radius: 2px;
+	background: rgba(0,0,0,0.05);
+	padding: 10px;
+	margin: 10px 20px;
+	display: inline-block;
+}
+
+figure > figcaption
+{
+	text-align: center;
+	display: block; /* For IE8 */
+}
+
+a > img {
+	padding: 1px;
+	margin: 1px;
+	border: none;
+	outline: 1px solid #0782C1;
+}
+
+/* Widget Styles */
+.code-featured
+{
+	border: 5px solid red;
+}
+
+.math-featured
+{
+	padding: 20px;
+	box-shadow: 0 0 2px rgba(200, 0, 0, 1);
+	background-color: rgba(255, 0, 0, 0.05);
+	margin: 10px;
+}
+
+.image-clean
+{
+	border: 0;
+	background: none;
+	padding: 0;
+}
+
+.image-clean > figcaption
+{
+	font-size: .9em;
+	text-align: right;
+}
+
+.image-grayscale
+{
+	background-color: white;
+	color: #666;
+}
+
+.image-grayscale img, img.image-grayscale
+{
+	filter: grayscale(100%);
+}
+
+.embed-240p
+{
+	max-width: 426px;
+	max-height: 240px;
+	margin:0 auto;
+}
+
+.embed-360p
+{
+	max-width: 640px;
+	max-height: 360px;
+	margin:0 auto;
+}
+
+.embed-480p
+{
+	max-width: 854px;
+	max-height: 480px;
+	margin:0 auto;
+}
+
+.embed-720p
+{
+	max-width: 1280px;
+	max-height: 720px;
+	margin:0 auto;
+}
+
+.embed-1080p
+{
+	max-width: 1920px;
+	max-height: 1080px;
+	margin:0 auto;
+}
+
+</style>
+<style>body { font-family: Arial; }</style>
+</head>
+<body class="cke_contents_ltr"><p>&lt;a href=&quot;https://codepen.io/uiswarup/full/wvqNWOY&quot; target=&quot;_blank&quot;&gt;</p>
+
+<p>&lt;header class=&quot;top-header&quot;&gt;</p>
+
+<p>&lt;/header&gt;</p>
+
+<p>&nbsp;</p>
+
+<p>&lt;!--dust particel--&gt;</p>
+
+<p>&lt;div&gt;</p>
+
+<p>&lt;div class=&quot;starsec&quot;&gt;&lt;/div&gt;</p>
+
+<p>&lt;div class=&quot;starthird&quot;&gt;&lt;/div&gt;</p>
+
+<p>&lt;div class=&quot;starfourth&quot;&gt;&lt;/div&gt;</p>
+
+<p>&lt;div class=&quot;starfifth&quot;&gt;&lt;/div&gt;</p>
+
+<p>&lt;/div&gt;</p>
+
+<p>&lt;!--Dust particle end---&gt;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&lt;div class=&quot;lamp__wrap&quot;&gt;</p>
+
+<p>&lt;div class=&quot;lamp&quot;&gt;</p>
+
+<p>&lt;div class=&quot;cable&quot;&gt;&lt;/div&gt;</p>
+
+<p>&lt;div class=&quot;cover&quot;&gt;&lt;/div&gt;</p>
+
+<p>&lt;div class=&quot;in-cover&quot;&gt;</p>
+
+<p>&lt;div class=&quot;bulb&quot;&gt;&lt;/div&gt;</p>
+
+<p>&lt;/div&gt;</p>
+
+<p>&lt;div class=&quot;light&quot;&gt;&lt;/div&gt;</p>
+
+<p>&lt;/div&gt;</p>
+
+<p>&lt;/div&gt;</p>
+
+<p>&lt;!-- END Lamp --&gt;</p>
+
+<p>&lt;section class=&quot;error&quot;&gt;</p>
+
+<p>&lt;!-- Content --&gt;</p>
+
+<p>&lt;div class=&quot;error__content&quot;&gt;</p>
+
+<p>&lt;div class=&quot;error__message message&quot;&gt;</p>
+
+<p>&lt;h1 class=&quot;message__title&quot;&gt;Page Not Found&lt;/h1&gt;</p>
+
+<p>&lt;p class=&quot;message__text&quot;&gt;We&#39;re sorry, the page you were looking for isn&#39;t found here. The link you followed may either be broken or no longer exists. Please try again, or take a look at our.&lt;/p&gt;</p>
+
+<p>&lt;/div&gt;</p>
+
+<p>&lt;div class=&quot;error__nav e-nav&quot;&gt;</p>
+
+<p>&lt;a href=&quot;&quot; target=&quot;_blanck&quot; class=&quot;e-nav__link&quot;&gt;&lt;/a&gt;</p>
+
+<p>&lt;/div&gt;</p>
+
+<p>&lt;/div&gt;</p>
+
+<p>&lt;!-- END Content --&gt;</p>
+
+<p>&nbsp;</p>
+
+<p>&lt;/section&gt;</p>
+
+<p>&nbsp;</p>
+
+<p>&lt;/a&gt;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>@charset &quot;UTF-8&quot;;</p>
+
+<p>&nbsp;</p>
+
+<p>/***********************************</p>
+
+<p>/* 1. BODY */</p>
+
+<p>/***********************************/</p>
+
+<p>&nbsp;</p>
+
+<p>* {</p>
+
+<p>margin: 0;</p>
+
+<p>padding: 0;</p>
+
+<p>-webkit-text-size-adjust: none;</p>
+
+<p>}</p>
+
+<p>&nbsp;</p>
+
+<p>html, body {</p>
+
+<p>height: 100%;</p>
+
+<p>overflow: hidden;</p>
+
+<p>}</p>
+
+<p>&nbsp;</p>
+
+<p>body {</p>
+
+<p>padding: 0;</p>
+
+<p>margin: 0;</p>
+
+<p>background: #181828;</p>
+
+<p>font-size: 14px;</p>
+
+<p>line-height: 1;</p>
+
+<p>}</p>
+
+<p>&nbsp;</p>
+
+<p>label {</p>
+
+<p>cursor: pointer;</p>
+
+<p>}</p>
+
+<p>&nbsp;</p>
+
+<p>a {</p>
+
+<p>margin: 0;</p>
+
+<p>padding: 0;</p>
+
+<p>vertical-align: baseline;</p>
+
+<p>background: transparent;</p>
+
+<p>text-decoration: none;</p>
+
+<p>color: #000;</p>
+
+<p>}</p>
+
+<p>&nbsp;</p>
+
+<p>input, select, button, textarea {</p>
+
+<p>margin: 0;</p>
+
+<p>font-size: 100%;</p>
+
+<p>}</p>
+
+<p>&nbsp;</p>
+
+<p>html, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre,</p>
+
+<p>a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp,</p>
+
+<p>small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li,</p>
+
+<p>fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, input {</p>
+
+<p>border: 0;</p>
+
+<p>outline: 0;</p>
+
+<p>font-size: 100%;</p>
+
+<p>vertical-align: baseline;</p>
+
+<p>background: transparent;</p>
+
+<p>}</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>.top-header:before {</p>
+
+<p>background-image: url(https://1.bp.blogspot.com/-gxsOcYWghHA/Xp_izTh4sFI/AAAAAAAAU8s/y637Fwg99qAuzW9na_NT_uApny8Vce95gCEwYBhgL/s1600/header-footer-gradient-bg.png);</p>
+
+<p>}</p>
+
+<p>.top-header:before {</p>
+
+<p>content: &#39;&#39;;</p>
+
+<p>display: block;</p>
+
+<p>width: 100%;</p>
+
+<p>height: 4px;</p>
+
+<p>background-repeat: repeat-x;</p>
+
+<p>background-size: contain;</p>
+
+<p>position: absolute;</p>
+
+<p>top: 0;</p>
+
+<p>left: 0;</p>
+
+<p>opacity:0.5;</p>
+
+<p>}</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>.starsec{</p>
+
+<p>content: &quot; &quot;;</p>
+
+<p>position: absolute;</p>
+
+<p>width: 3px;</p>
+
+<p>height: 3px;</p>
+
+<p>background: transparent;</p>
+
+<p>box-shadow: 571px 173px #00BCD4, 1732px 143px #00BCD4, 1745px 454px #FF5722, 234px 784px #00BCD4, 1793px 1123px #FF9800, 1076px 504px #03A9F4, 633px 601px #FF5722, 350px 630px #FFEB3B, 1164px 782px #00BCD4, 76px 690px #3F51B5, 1825px 701px #CDDC39, 1646px 578px #FFEB3B, 544px 293px #2196F3, 445px 1061px #673AB7, 928px 47px #00BCD4, 168px 1410px #8BC34A, 777px 782px #9C27B0, 1235px 1941px #9C27B0, 104px 1690px #8BC34A, 1167px 1338px #E91E63, 345px 1652px #009688, 1682px 1196px #F44336, 1995px 494px #8BC34A, 428px 798px #FF5722, 340px 1623px #F44336, 605px 349px #9C27B0, 1339px 1344px #673AB7, 1102px 1745px #3F51B5, 1592px 1676px #2196F3, 419px 1024px #FF9800, 630px 1033px #4CAF50, 1995px 1644px #00BCD4, 1092px 712px #9C27B0, 1355px 606px #F44336, 622px 1881px #CDDC39, 1481px 621px #9E9E9E, 19px 1348px #8BC34A, 864px 1780px #E91E63, 442px 1136px #2196F3, 67px 712px #FF5722, 89px 1406px #F44336, 275px 321px #009688, 592px 630px #E91E63, 1012px 1690px #9C27B0, 1749px 23px #673AB7, 94px 1542px #FFEB3B, 1201px 1657px #3F51B5, 1505px 692px #2196F3, 1799px 601px #03A9F4, 656px 811px #00BCD4, 701px 597px #00BCD4, 1202px 46px #FF5722, 890px 569px #FF5722, 1613px 813px #2196F3, 223px 252px #FF9800, 983px 1093px #F44336, 726px 1029px #FFC107, 1764px 778px #CDDC39, 622px 1643px #F44336, 174px 1559px #673AB7, 212px 517px #00BCD4, 340px 505px #FFF, 1700px 39px #FFF, 1768px 516px #F44336, 849px 391px #FF9800, 228px 1824px #FFF, 1119px 1680px #FFC107, 812px 1480px #3F51B5, 1438px 1585px #CDDC39, 137px 1397px #FFF, 1080px 456px #673AB7, 1208px 1437px #03A9F4, 857px 281px #F44336, 1254px 1306px #CDDC39, 987px 990px #4CAF50, 1655px 911px #00BCD4, 1102px 1216px #FF5722, 1807px 1044px #FFF, 660px 435px #03A9F4, 299px 678px #4CAF50, 1193px 115px #FF9800, 918px 290px #CDDC39, 1447px 1422px #FFEB3B, 91px 1273px #9C27B0, 108px 223px #FFEB3B, 146px 754px #00BCD4, 461px 1446px #FF5722, 1004px 391px #673AB7, 1529px 516px #F44336, 1206px 845px #CDDC39, 347px 583px #009688, 1102px 1332px #F44336, 709px 1756px #00BCD4, 1972px 248px #FFF, 1669px 1344px #FF5722, 1132px 406px #F44336, 320px 1076px #CDDC39, 126px 943px #FFEB3B, 263px 604px #FF5722, 1546px 692px #F44336;</p>
+
+<p>animation: animStar 150s linear infinite;</p>
+
+<p>}</p>
+
+<p>&nbsp;</p>
+
+<p>.starthird</p>
+
+<p>{</p>
+
+<p>content: &quot; &quot;;</p>
+
+<p>position: absolute;</p>
+
+<p>width: 3px;</p>
+
+<p>height: 3px;</p>
+
+<p>background: transparent;</p>
+
+<p>box-shadow: 571px 173px #00BCD4, 1732px 143px #00BCD4, 1745px 454px #FF5722, 234px 784px #00BCD4, 1793px 1123px #FF9800, 1076px 504px #03A9F4, 633px 601px #FF5722, 350px 630px #FFEB3B, 1164px 782px #00BCD4, 76px 690px #3F51B5, 1825px 701px #CDDC39, 1646px 578px #FFEB3B, 544px 293px #2196F3, 445px 1061px #673AB7, 928px 47px #00BCD4, 168px 1410px #8BC34A, 777px 782px #9C27B0, 1235px 1941px #9C27B0, 104px 1690px #8BC34A, 1167px 1338px #E91E63, 345px 1652px #009688, 1682px 1196px #F44336, 1995px 494px #8BC34A, 428px 798px #FF5722, 340px 1623px #F44336, 605px 349px #9C27B0, 1339px 1344px #673AB7, 1102px 1745px #3F51B5, 1592px 1676px #2196F3, 419px 1024px #FF9800, 630px 1033px #4CAF50, 1995px 1644px #00BCD4, 1092px 712px #9C27B0, 1355px 606px #F44336, 622px 1881px #CDDC39, 1481px 621px #9E9E9E, 19px 1348px #8BC34A, 864px 1780px #E91E63, 442px 1136px #2196F3, 67px 712px #FF5722, 89px 1406px #F44336, 275px 321px #009688, 592px 630px #E91E63, 1012px 1690px #9C27B0, 1749px 23px #673AB7, 94px 1542px #FFEB3B, 1201px 1657px #3F51B5, 1505px 692px #2196F3, 1799px 601px #03A9F4, 656px 811px #00BCD4, 701px 597px #00BCD4, 1202px 46px #FF5722, 890px 569px #FF5722, 1613px 813px #2196F3, 223px 252px #FF9800, 983px 1093px #F44336, 726px 1029px #FFC107, 1764px 778px #CDDC39, 622px 1643px #F44336, 174px 1559px #673AB7, 212px 517px #00BCD4, 340px 505px #FFF, 1700px 39px #FFF, 1768px 516px #F44336, 849px 391px #FF9800, 228px 1824px #FFF, 1119px 1680px #FFC107, 812px 1480px #3F51B5, 1438px 1585px #CDDC39, 137px 1397px #FFF, 1080px 456px #673AB7, 1208px 1437px #03A9F4, 857px 281px #F44336, 1254px 1306px #CDDC39, 987px 990px #4CAF50, 1655px 911px #00BCD4, 1102px 1216px #FF5722, 1807px 1044px #FFF, 660px 435px #03A9F4, 299px 678px #4CAF50, 1193px 115px #FF9800, 918px 290px #CDDC39, 1447px 1422px #FFEB3B, 91px 1273px #9C27B0, 108px 223px #FFEB3B, 146px 754px #00BCD4, 461px 1446px #FF5722, 1004px 391px #673AB7, 1529px 516px #F44336, 1206px 845px #CDDC39, 347px 583px #009688, 1102px 1332px #F44336, 709px 1756px #00BCD4, 1972px 248px #FFF, 1669px 1344px #FF5722, 1132px 406px #F44336, 320px 1076px #CDDC39, 126px 943px #FFEB3B, 263px 604px #FF5722, 1546px 692px #F44336;</p>
+
+<p>animation: animStar 10s linear infinite;</p>
+
+<p>}</p>
+
+<p>&nbsp;</p>
+
+<p>.starfourth</p>
+
+<p>{</p>
+
+<p>content: &quot; &quot;;</p>
+
+<p>position: absolute;</p>
+
+<p>width: 2px;</p>
+
+<p>height: 2px;</p>
+
+<p>background: transparent;</p>
+
+<p>box-shadow: 571px 173px #00BCD4, 1732px 143px #00BCD4, 1745px 454px #FF5722, 234px 784px #00BCD4, 1793px 1123px #FF9800, 1076px 504px #03A9F4, 633px 601px #FF5722, 350px 630px #FFEB3B, 1164px 782px #00BCD4, 76px 690px #3F51B5, 1825px 701px #CDDC39, 1646px 578px #FFEB3B, 544px 293px #2196F3, 445px 1061px #673AB7, 928px 47px #00BCD4, 168px 1410px #8BC34A, 777px 782px #9C27B0, 1235px 1941px #9C27B0, 104px 1690px #8BC34A, 1167px 1338px #E91E63, 345px 1652px #009688, 1682px 1196px #F44336, 1995px 494px #8BC34A, 428px 798px #FF5722, 340px 1623px #F44336, 605px 349px #9C27B0, 1339px 1344px #673AB7, 1102px 1745px #3F51B5, 1592px 1676px #2196F3, 419px 1024px #FF9800, 630px 1033px #4CAF50, 1995px 1644px #00BCD4, 1092px 712px #9C27B0, 1355px 606px #F44336, 622px 1881px #CDDC39, 1481px 621px #9E9E9E, 19px 1348px #8BC34A, 864px 1780px #E91E63, 442px 1136px #2196F3, 67px 712px #FF5722, 89px 1406px #F44336, 275px 321px #009688, 592px 630px #E91E63, 1012px 1690px #9C27B0, 1749px 23px #673AB7, 94px 1542px #FFEB3B, 1201px 1657px #3F51B5, 1505px 692px #2196F3, 1799px 601px #03A9F4, 656px 811px #00BCD4, 701px 597px #00BCD4, 1202px 46px #FF5722, 890px 569px #FF5722, 1613px 813px #2196F3, 223px 252px #FF9800, 983px 1093px #F44336, 726px 1029px #FFC107, 1764px 778px #CDDC39, 622px 1643px #F44336, 174px 1559px #673AB7, 212px 517px #00BCD4, 340px 505px #FFF, 1700px 39px #FFF, 1768px 516px #F44336, 849px 391px #FF9800, 228px 1824px #FFF, 1119px 1680px #FFC107, 812px 1480px #3F51B5, 1438px 1585px #CDDC39, 137px 1397px #FFF, 1080px 456px #673AB7, 1208px 1437px #03A9F4, 857px 281px #F44336, 1254px 1306px #CDDC39, 987px 990px #4CAF50, 1655px 911px #00BCD4, 1102px 1216px #FF5722, 1807px 1044px #FFF, 660px 435px #03A9F4, 299px 678px #4CAF50, 1193px 115px #FF9800, 918px 290px #CDDC39, 1447px 1422px #FFEB3B, 91px 1273px #9C27B0, 108px 223px #FFEB3B, 146px 754px #00BCD4, 461px 1446px #FF5722, 1004px 391px #673AB7, 1529px 516px #F44336, 1206px 845px #CDDC39, 347px 583px #009688, 1102px 1332px #F44336, 709px 1756px #00BCD4, 1972px 248px #FFF, 1669px 1344px #FF5722, 1132px 406px #F44336, 320px 1076px #CDDC39, 126px 943px #FFEB3B, 263px 604px #FF5722, 1546px 692px #F44336;</p>
+
+<p>animation: animStar 50s linear infinite;</p>
+
+<p>}</p>
+
+<p>&nbsp;</p>
+
+<p>.starfifth</p>
+
+<p>{</p>
+
+<p>content: &quot; &quot;;</p>
+
+<p>position: absolute;</p>
+
+<p>width: 1px;</p>
+
+<p>height: 1px;</p>
+
+<p>background: transparent;</p>
+
+<p>box-shadow: 571px 173px #00BCD4, 1732px 143px #00BCD4, 1745px 454px #FF5722, 234px 784px #00BCD4, 1793px 1123px #FF9800, 1076px 504px #03A9F4, 633px 601px #FF5722, 350px 630px #FFEB3B, 1164px 782px #00BCD4, 76px 690px #3F51B5, 1825px 701px #CDDC39, 1646px 578px #FFEB3B, 544px 293px #2196F3, 445px 1061px #673AB7, 928px 47px #00BCD4, 168px 1410px #8BC34A, 777px 782px #9C27B0, 1235px 1941px #9C27B0, 104px 1690px #8BC34A, 1167px 1338px #E91E63, 345px 1652px #009688, 1682px 1196px #F44336, 1995px 494px #8BC34A, 428px 798px #FF5722, 340px 1623px #F44336, 605px 349px #9C27B0, 1339px 1344px #673AB7, 1102px 1745px #3F51B5, 1592px 1676px #2196F3, 419px 1024px #FF9800, 630px 1033px #4CAF50, 1995px 1644px #00BCD4, 1092px 712px #9C27B0, 1355px 606px #F44336, 622px 1881px #CDDC39, 1481px 621px #9E9E9E, 19px 1348px #8BC34A, 864px 1780px #E91E63, 442px 1136px #2196F3, 67px 712px #FF5722, 89px 1406px #F44336, 275px 321px #009688, 592px 630px #E91E63, 1012px 1690px #9C27B0, 1749px 23px #673AB7, 94px 1542px #FFEB3B, 1201px 1657px #3F51B5, 1505px 692px #2196F3, 1799px 601px #03A9F4, 656px 811px #00BCD4, 701px 597px #00BCD4, 1202px 46px #FF5722, 890px 569px #FF5722, 1613px 813px #2196F3, 223px 252px #FF9800, 983px 1093px #F44336, 726px 1029px #FFC107, 1764px 778px #CDDC39, 622px 1643px #F44336, 174px 1559px #673AB7, 212px 517px #00BCD4, 340px 505px #FFF, 1700px 39px #FFF, 1768px 516px #F44336, 849px 391px #FF9800, 228px 1824px #FFF, 1119px 1680px #FFC107, 812px 1480px #3F51B5, 1438px 1585px #CDDC39, 137px 1397px #FFF, 1080px 456px #673AB7, 1208px 1437px #03A9F4, 857px 281px #F44336, 1254px 1306px #CDDC39, 987px 990px #4CAF50, 1655px 911px #00BCD4, 1102px 1216px #FF5722, 1807px 1044px #FFF, 660px 435px #03A9F4, 299px 678px #4CAF50, 1193px 115px #FF9800, 918px 290px #CDDC39, 1447px 1422px #FFEB3B, 91px 1273px #9C27B0, 108px 223px #FFEB3B, 146px 754px #00BCD4, 461px 1446px #FF5722, 1004px 391px #673AB7, 1529px 516px #F44336, 1206px 845px #CDDC39, 347px 583px #009688, 1102px 1332px #F44336, 709px 1756px #00BCD4, 1972px 248px #FFF, 1669px 1344px #FF5722, 1132px 406px #F44336, 320px 1076px #CDDC39, 126px 943px #FFEB3B, 263px 604px #FF5722, 1546px 692px #F44336;</p>
+
+<p>animation: animStar 80s linear infinite;</p>
+
+<p>}</p>
+
+<p>&nbsp;</p>
+
+<p>@keyframes animStar</p>
+
+<p>{</p>
+
+<p>0% {</p>
+
+<p>transform: translateY(0px);</p>
+
+<p>}</p>
+
+<p>100% {</p>
+
+<p>transform: translateY(-2000px);</p>
+
+<p>}</p>
+
+<p>}</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>button {</p>
+
+<p>border: none;</p>
+
+<p>padding: 0;</p>
+
+<p>font-size: 0;</p>
+
+<p>line-height: 0;</p>
+
+<p>background: none;</p>
+
+<p>cursor: pointer;</p>
+
+<p>}</p>
+
+<p>&nbsp;</p>
+
+<p>:focus {</p>
+
+<p>outline: 0;</p>
+
+<p>}</p>
+
+<p>&nbsp;</p>
+
+<p>.clearfix:before, .clearfix:after {</p>
+
+<p>content: &quot;\0020&quot;;</p>
+
+<p>display: block;</p>
+
+<p>height: 0;</p>
+
+<p>visibility: hidden;</p>
+
+<p>}</p>
+
+<p>&nbsp;</p>
+
+<p>.clearfix:after {</p>
+
+<p>clear: both;</p>
+
+<p>}</p>
+
+<p>&nbsp;</p>
+
+<p>.clearfix {</p>
+
+<p>zoom: 1;</p>
+
+<p>}</p>
+
+<p>&nbsp;</p>
+
+<p>/* 1. END BODY */</p>
+
+<p>/***********************************/</p>
+
+<p>&nbsp;</p>
+
+<p>/***********************************</p>
+
+<p>/* 2. CONTENT */</p>
+
+<p>/***********************************/</p>
+
+<p>/* 2.1. Section error */</p>
+
+<p>.error {</p>
+
+<p>min-height: 100vh;</p>
+
+<p>position: relative;</p>
+
+<p>padding: 240px 0;</p>
+
+<p>box-sizing: border-box;</p>
+
+<p>width: 100%;</p>
+
+<p>height: 100%;</p>
+
+<p>text-align: center;</p>
+
+<p>margin-top: 70px;</p>
+
+<p>}</p>
+
+<p>&nbsp;</p>
+
+<p>.error__overlay {</p>
+
+<p>position: absolute;</p>
+
+<p>top: 0;</p>
+
+<p>left: 0;</p>
+
+<p>width: 100%;</p>
+
+<p>height: 100%;</p>
+
+<p>overflow: hidden;</p>
+
+<p>}</p>
+
+<p>&nbsp;</p>
+
+<p>.error__content {</p>
+
+<p>position: absolute;</p>
+
+<p>top: 50%;</p>
+
+<p>left: 50%;</p>
+
+<p>width: 100%;</p>
+
+<p>-webkit-transform: translate(-50%, -50%);</p>
+
+<p>transform: translate(-50%, -50%);</p>
+
+<p>}</p>
+
+<p>&nbsp;</p>
+
+<p>.error__message {</p>
+
+<p>text-align: center;</p>
+
+<p>color: #181828;</p>
+
+<p>}</p>
+
+<p>&nbsp;</p>
+
+<p>.message__title {</p>
+
+<p>font-family: &#39;Montserrat&#39;, sans-serif;</p>
+
+<p>font-weight: 900;</p>
+
+<p>text-transform: uppercase;</p>
+
+<p>letter-spacing: 5px;</p>
+
+<p>font-size: 5.6rem;</p>
+
+<p>padding-bottom: 40px;</p>
+
+<p>max-width: 960px;</p>
+
+<p>margin: 0 auto;</p>
+
+<p>}</p>
+
+<p>&nbsp;</p>
+
+<p>.message__text {</p>
+
+<p>font-family: &#39;Montserrat&#39;, sans-serif;</p>
+
+<p>line-height: 42px;</p>
+
+<p>font-size: 18px;</p>
+
+<p>padding: 0 60px;</p>
+
+<p>max-width: 680px;</p>
+
+<p>margin: auto;</p>
+
+<p>}</p>
+
+<p>&nbsp;</p>
+
+<p>.error__nav {</p>
+
+<p>max-width: 600px;</p>
+
+<p>margin: 40px auto 0;</p>
+
+<p>text-align: center;</p>
+
+<p>}</p>
+
+<p>&nbsp;</p>
+
+<p>.e-nav__form {</p>
+
+<p>position: relative;</p>
+
+<p>height: 45px;</p>
+
+<p>overflow: hidden;</p>
+
+<p>width: 170px;</p>
+
+<p>display: inline-block;</p>
+
+<p>vertical-align: top;</p>
+
+<p>border: 1px solid #212121;</p>
+
+<p>padding-left: 10px;</p>
+
+<p>padding-right: 46px;</p>
+
+<p>}</p>
+
+<p>&nbsp;</p>
+
+<p>.e-nav__icon {</p>
+
+<p>position: absolute;</p>
+
+<p>right: 15px;</p>
+
+<p>top: 50%;</p>
+
+<p>-webkit-transform: translateY(-50%);</p>
+
+<p>transform: translateY(-50%);</p>
+
+<p>color: #212121;</p>
+
+<p>-webkit-transition: color .25s ease;</p>
+
+<p>transition: color .25s ease;</p>
+
+<p>}</p>
+
+<p>&nbsp;</p>
+
+<p>.e-nav__link {</p>
+
+<p>height: 45px;</p>
+
+<p>line-height: 45px;</p>
+
+<p>width: 170px;</p>
+
+<p>display: inline-block;</p>
+
+<p>vertical-align: top;</p>
+
+<p>margin: 0 15px;</p>
+
+<p>border: 1px solid #181828;</p>
+
+<p>color: #181828;</p>
+
+<p>text-decoration: none;</p>
+
+<p>font-family: &#39;Montserrat&#39;, sans-serif;</p>
+
+<p>text-transform: uppercase;</p>
+
+<p>font-size: 11px;</p>
+
+<p>letter-spacing: .1rem;</p>
+
+<p>position: relative;</p>
+
+<p>overflow: hidden;</p>
+
+<p>}</p>
+
+<p>&nbsp;</p>
+
+<p>.e-nav__link:before {</p>
+
+<p>content: &#39;&#39;;</p>
+
+<p>height: 200px;</p>
+
+<p>background: #212121;</p>
+
+<p>position: absolute;</p>
+
+<p>top: 70px;</p>
+
+<p>right: 70px;</p>
+
+<p>width: 260px;</p>
+
+<p>-webkit-transition: all .3s;</p>
+
+<p>transition: all .3s;</p>
+
+<p>-webkit-transform: rotate(50deg);</p>
+
+<p>transform: rotate(50deg);</p>
+
+<p>}</p>
+
+<p>&nbsp;</p>
+
+<p>.e-nav__link:after {</p>
+
+<p>-webkit-transition: all .3s;</p>
+
+<p>transition: all .3s;</p>
+
+<p>z-index: 999;</p>
+
+<p>position: relative;</p>
+
+<p>}</p>
+
+<p>&nbsp;</p>
+
+<p>.e-nav__link:after {</p>
+
+<p>content: &quot;Home Page&quot;;</p>
+
+<p>}</p>
+
+<p>&nbsp;</p>
+
+<p>.e-nav__link:hover:before {</p>
+
+<p>top: -60px;</p>
+
+<p>right: -50px;</p>
+
+<p>}</p>
+
+<p>&nbsp;</p>
+
+<p>.e-nav__link:hover {</p>
+
+<p>color: #fff;</p>
+
+<p>}</p>
+
+<p>&nbsp;</p>
+
+<p>.e-nav__link:nth-child(2):hover:after {</p>
+
+<p>color: #fff;</p>
+
+<p>}</p>
+
+<p>/* 2.1. END Section Error */</p>
+
+<p>&nbsp;</p>
+
+<p>/* 2.2. Social style */</p>
+
+<p>.error__social {</p>
+
+<p>position: absolute;</p>
+
+<p>top: 50%;</p>
+
+<p>-webkit-transform: translateY(-50%);</p>
+
+<p>transform: translateY(-50%);</p>
+
+<p>left: 20px;</p>
+
+<p>z-index: 10;</p>
+
+<p>}</p>
+
+<p>&nbsp;</p>
+
+<p>.e-social__list {</p>
+
+<p>margin: 0;</p>
+
+<p>padding: 0;</p>
+
+<p>list-style-type: none;</p>
+
+<p>}</p>
+
+<p>&nbsp;</p>
+
+<p>.e-social__icon {</p>
+
+<p>padding-bottom: 30px;</p>
+
+<p>}</p>
+
+<p>&nbsp;</p>
+
+<p>.e-social__icon:last-child {</p>
+
+<p>padding-bottom: 0;</p>
+
+<p>}</p>
+
+<p>&nbsp;</p>
+
+<p>.e-social__link {</p>
+
+<p>color: #fff;</p>
+
+<p>-webkit-transition: all .25s ease;</p>
+
+<p>transition: all .25s ease;</p>
+
+<p>display: block;</p>
+
+<p>}</p>
+
+<p>&nbsp;</p>
+
+<p>.e-social__link:hover {</p>
+
+<p>opacity: .7;</p>
+
+<p>}</p>
+
+<p>/* 2.2. END Social style */</p>
+
+<p>&nbsp;</p>
+
+<p>/* 2.3. Lamp */</p>
+
+<p>.lamp {</p>
+
+<p>position: absolute;</p>
+
+<p>left: 0px;</p>
+
+<p>right: 0px;</p>
+
+<p>top: 0px;</p>
+
+<p>margin: 0px auto;</p>
+
+<p>width: 300px;</p>
+
+<p>display: flex;</p>
+
+<p>flex-direction: column;</p>
+
+<p>align-items: center;</p>
+
+<p>transform-origin: center top;</p>
+
+<p>animation-timing-function: cubic-bezier(0.6, 0, 0.38, 1);</p>
+
+<p>animation: move 5.1s infinite;</p>
+
+<p>}</p>
+
+<p>&nbsp;</p>
+
+<p>@keyframes move {</p>
+
+<p>0% {</p>
+
+<p>transform: rotate(40deg);</p>
+
+<p>}</p>
+
+<p>50% {</p>
+
+<p>transform: rotate(-40deg);</p>
+
+<p>}</p>
+
+<p>100% {</p>
+
+<p>transform: rotate(40deg);</p>
+
+<p>}</p>
+
+<p>}</p>
+
+<p>&nbsp;</p>
+
+<p>.cable {</p>
+
+<p>width: 8px;</p>
+
+<p>height: 248px;</p>
+
+<p>background-image: linear-gradient(rgb(32 148 218 / 70%), rgb(193 65 25)), linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7));</p>
+
+<p>}</p>
+
+<p>&nbsp;</p>
+
+<p>.cover {</p>
+
+<p>width: 200px;</p>
+
+<p>height: 80px;</p>
+
+<p>background: #0bd5e8;</p>
+
+<p>border-top-left-radius: 50%;</p>
+
+<p>border-top-right-radius: 50%;</p>
+
+<p>position: relative;</p>
+
+<p>z-index: 200;</p>
+
+<p>}</p>
+
+<p>&nbsp;</p>
+
+<p>.in-cover {</p>
+
+<p>width: 100%;</p>
+
+<p>max-width: 200px;</p>
+
+<p>height: 20px;</p>
+
+<p>border-radius: 100%;</p>
+
+<p>background: #08ffff;</p>
+
+<p>position: absolute;</p>
+
+<p>left: 0px;</p>
+
+<p>right: 0px;</p>
+
+<p>margin: 0px auto;</p>
+
+<p>bottom: -9px;</p>
+
+<p>z-index: 100;</p>
+
+<p>}</p>
+
+<p>.in-cover .bulb {</p>
+
+<p>width: 50px;</p>
+
+<p>height: 50px;</p>
+
+<p>background-color: #08fffa;</p>
+
+<p>border-radius: 50%;</p>
+
+<p>position: absolute;</p>
+
+<p>left: 0px;</p>
+
+<p>right: 0px;</p>
+
+<p>bottom: -20px;</p>
+
+<p>margin: 0px auto;</p>
+
+<p>-webkit-box-shadow: 0 0 15px 7px rgba(0,255,255,0.8), 0 0 40px 25px rgba(0,255,255,0.5), -75px 0 30px 15px rgba(0,255,255,0.2);</p>
+
+<p>box-shadow: 0 0 25px 7px rgb(127 255 255 / 80%), 0 0 64px 47px rgba(0,255,255,0.5), 0px 0 30px 15px rgba(0,255,255,0.2);</p>
+
+<p>}</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>.light {</p>
+
+<p>width: 200px;</p>
+
+<p>height: 0px;</p>
+
+<p>border-bottom: 900px solid rgb(44 255 255 / 24%);</p>
+
+<p>border-left: 50px solid transparent;</p>
+
+<p>border-right: 50px solid transparent;</p>
+
+<p>position: absolute;</p>
+
+<p>left: 0px;</p>
+
+<p>right: 0px;</p>
+
+<p>top: 270px;</p>
+
+<p>margin: 0px auto;</p>
+
+<p>z-index: 1;</p>
+
+<p>border-radius: 90px 90px 0px 0px;</p>
+
+<p>}</p>
+
+<p>/* 2.3. END Lamp */</p>
+
+<p>/***********************************</p>
+
+<p>/* 2. END CONTENT */</p>
+
+<p>/***********************************/</p>
+
+<p>&nbsp;</p>
+
+<p>/***********************************</p>
+
+<p>/* 3. RESPONSIVE */</p>
+
+<p>/***********************************/</p>
+
+<p>.error {</p>
+
+<p>overflow: hidden;</p>
+
+<p>max-height: 100vh;</p>
+
+<p>}</p>
+
+<p>@media (max-width: 1400px) {</p>
+
+<p>.lamp {</p>
+
+<p>zoom: .5;</p>
+
+<p>}</p>
+
+<p>.error__content {</p>
+
+<p>top: 55%;</p>
+
+<p>}</p>
+
+<p>.message__title {</p>
+
+<p>font-size: 3.5rem;</p>
+
+<p>}</p>
+
+<p>}</p>
+
+<p>@media (max-width: 900px) {</p>
+
+<p>&nbsp;</p>
+
+<p>.message__title {</p>
+
+<p>font-size: 34px;</p>
+
+<p>&nbsp;</p>
+
+<p>}</p>
+
+<p>.error__content {</p>
+
+<p>top: 55%;</p>
+
+<p>}</p>
+
+<p>}</p>
+
+<p>@media (max-width: 950px) {</p>
+
+<p>.lamp__wrap {</p>
+
+<p>max-height: 100vh;</p>
+
+<p>overflow: hidden;</p>
+
+<p>max-width: 100vw;</p>
+
+<p>}</p>
+
+<p>.error__social {</p>
+
+<p>bottom: 30px;</p>
+
+<p>top: auto;</p>
+
+<p>transform: none;</p>
+
+<p>width: 100%;</p>
+
+<p>position: fixed;</p>
+
+<p>left: 0;</p>
+
+<p>}</p>
+
+<p>.e-social__icon {</p>
+
+<p>display: inline-block;</p>
+
+<p>padding-right: 30px;</p>
+
+<p>}</p>
+
+<p>.e-social__icon:last-child {</p>
+
+<p>padding-right: 0;</p>
+
+<p>}</p>
+
+<p>.e-social__icon {</p>
+
+<p>padding-bottom: 0;</p>
+
+<p>}</p>
+
+<p>}</p>
+
+<p>@media (max-width: 750px) {</p>
+
+<p>body, html, {</p>
+
+<p>max-height: 100vh;</p>
+
+<p>}</p>
+
+<p>.error__content {</p>
+
+<p>position: static;</p>
+
+<p>margin: 0 auto;</p>
+
+<p>transform: none;</p>
+
+<p>padding-top: 300px;</p>
+
+<p>}</p>
+
+<p>.error {</p>
+
+<p>padding-top: 0;</p>
+
+<p>padding-bottom: 100px;</p>
+
+<p>height: 100vh;</p>
+
+<p>}</p>
+
+<p>}</p>
+
+<p>@media (max-width: 650px) {</p>
+
+<p>.message__title {</p>
+
+<p>font-size: 36px;</p>
+
+<p>padding-bottom: 20px;</p>
+
+<p>}</p>
+
+<p>.message__text {</p>
+
+<p>font-size: 16px;</p>
+
+<p>line-height: 2;</p>
+
+<p>padding-right: 20px;</p>
+
+<p>padding-left: 20px;</p>
+
+<p>}</p>
+
+<p>.lamp {</p>
+
+<p>zoom: .6;</p>
+
+<p>}</p>
+
+<p>.error__content {</p>
+
+<p>padding-top: 180px;</p>
+
+<p>}</p>
+
+<p>}</p>
+
+<p>@media (max-width: 480px) {</p>
+
+<p>&nbsp;</p>
+
+<p>.message__title {</p>
+
+<p>font-size: 30px;</p>
+
+<p>}</p>
+
+<p>.message__text {</p>
+
+<p>padding-left: 10px;</p>
+
+<p>padding-right: 10px;</p>
+
+<p>font-size: 15px;</p>
+
+<p>}</p>
+
+<p>.error__nav {</p>
+
+<p>margin-top: 20px;</p>
+
+<p>}</p>
+
+<p>}</p>
+
+</body>
+</html>

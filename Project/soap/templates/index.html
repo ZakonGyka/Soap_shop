@@ -1,0 +1,145 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Main Page{% endblock %}
+{% block header %}{% endblock %}
+
+{% block content %}
+
+    {% include "widgets/menu.html" with index=True %}
+<section class="product-sale" xmlns="http://www.w3.org/1999/html">
+
+    <div class="text-center">
+        <h2>Новый товар</h2>
+    </div>
+        <div class="row">
+            {% for new_product in new_products %}
+                <div class="col-md-4">
+                    <div class="product-item">
+                        <ul>
+                            <li>
+                                <div class="product-thumb">
+                                    {% if new_product.images.exists %}
+                                        <img class="img-responsive" src="{{ new_product.images.all.0.product_image.url }}" alt="product-img">
+                                    {% else %}
+                                        <img class="img-responsive" src="{% static 'base_images/empty_img_1500.png' %}" alt="product-img!!!">
+                                    {% endif %}
+                                    <div class="preview-meta">
+                                        <ul>
+                                            <li>
+                                                <span data-toggle="modal" data-target="#product-modal">
+                                                    <i class="tf-ion-ios-search-strong"></i>
+                                                </span>
+                                            </li>
+                                            <li>
+                                                <a href="#!"><i class="tf-ion-ios-heart"></i></a>
+                                            </li>
+                                            <li>
+                                                <a href="#!"><i class="tf-ion-android-cart"></i></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="product-content">
+                                    <h4><a href="{% url 'single_product' new_product.id %}">{{ new_product.title }}</a></h4>
+                                    <p class="price">${{ new_product.price }}</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    <div class="text-center">
+        <h2>Акционный товар</h2>
+    </div>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="product-item">
+                    <div class="product-thumb">
+                        <span class="bage">Sale</span>
+                        <img class="img-responsive" src="{% static 'Aviato_design/images/shop/products/product-1.jpg' %}" alt="product-img">
+                        <div class="preview-meta">
+                            <ul>
+                                <li>
+                                    <span data-toggle="modal" data-target="#product-modal">
+                                        <i class="tf-ion-ios-search-strong"></i>
+                                    </span>
+                                </li>
+                                <li>
+                                    <a href="#!"><i class="tf-ion-ios-heart"></i></a>
+                                </li>
+                                <li>
+                                    <a href="#!"><i class="tf-ion-android-cart"></i></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="product-content">
+                        <h4><a href="single-product.html">Набор 1</a></h4>
+                        <p class="price">$100</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="product-item">
+                    <div class="product-thumb">
+                        <span class="bage">Sale</span>
+                        <img class="img-responsive" src="{% static 'Aviato_design/images/shop/products/product-2.jpg' %}" alt="product-img">
+                        <div class="preview-meta">
+                            <ul>
+                                <li>
+                                    <span data-toggle="modal" data-target="#product-modal">
+                                        <i class="tf-ion-ios-search-strong"></i>
+                                    </span>
+                                </li>
+                                <li>
+                                    <a href="#!"><i class="tf-ion-ios-heart"></i></a>
+                                </li>
+                                <li>
+                                    <a href="#!"><i class="tf-ion-android-cart"></i></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="product-content">
+                        <h4><a href="product-single.html">Набор 2</a></h4>
+                        <p class="price">$200</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="product-item">
+                    <div class="product-thumb">
+                        <span class="bage">Sale</span>
+                        <img class="img-responsive" src="{% static 'Aviato_design/images/shop/products/product-2.jpg' %}" alt="product-img">
+                        <div class="preview-meta">
+                            <ul>
+                                <li>
+                                    <span data-toggle="modal" data-target="#product-modal">
+                                        <i class="tf-ion-ios-search-strong"></i>
+                                    </span>
+                                </li>
+                                <li>
+                                    <a href="#!"><i class="tf-ion-ios-heart"></i></a>
+                                </li>
+                                <li>
+                                    <a href="#!"><i class="tf-ion-android-cart"></i></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="product-content">
+                        <h4><a href="product-single.html">Набор 2</a></h4>
+                        <p class="price">$200</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+</section>
+
+<!--    {% if page.has_other_pages %}-->
+<!--        {% include "paginator.html" with items=page paginator=paginator %}-->
+<!--    {% endif %}-->
+
+{% endblock %}
