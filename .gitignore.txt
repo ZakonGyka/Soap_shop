@@ -1,4 +1,3 @@
 Project/env/
 Project/venv/
 .idea
-Soap_shop_local_damp/
